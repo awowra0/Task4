@@ -88,7 +88,7 @@ def find_top_customer(dfo, dfu):
 
 def find_duplicates(dfu):
     dfu_results = {"ALL": len(dfu)}
-    df = df.drop_duplicates(keep="first")
+    df = dfu.drop_duplicates(keep="first")
     for i in (['email','address','name'],['phone','address','name'],['email','phone','name'],['email','address','phone'],
               ['email','address'],['email','phone'],['email','name'],['phone','address'],['phone','name'],['address','name']):
         df = df.drop_duplicates(subset=i,keep="first")
