@@ -2,6 +2,8 @@
 
 ## Usage  
 Import task4.py file and run available functions  
+Or  
+Open task4notebook.ipynb and run prepared cells  
 
 ## Functions  
 create_dfb(num) - returns books dataframe; num is number between 1 and 5   
