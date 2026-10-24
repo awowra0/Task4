@@ -31,9 +31,7 @@ def create_dfo(num=1):
     df["paid_price"] = df["quantity"] * value
     df["timestamp"] = df["timestamp"].str.replace(r"([AaPp]+)([.]*)([Mm]+)([.]*)","",regex=True).replace(r"([T]*)([0-9]*):([0-9]*)([:0-9]*([.0-9]*))","",regex=True)
     df["timestamp"] = pd.to_datetime(df["timestamp"],format="mixed",utc=True,errors="coerce").dt.date
-    df = df.drop(df[df["shipping"]==""].index).drop(df[df["shipping"]=="NULL"].index).drop(df[df["shipping"]==" "].index)
-    df = df.dropna()
-    df["shipping"] = df["shipping"]#.fillna("Unknown").replace({"NULL": "Unknown", "None": "Unknown", "":"Unknown"})
+    df["shipping"] = df["shipping"].fillna("Unknown").replace({"NULL": "Unknown", "None": "Unknown", "":"Unknown"})
     pd.set_option('display.float_format', lambda x: f'{x:.2f}')
     return df
 
