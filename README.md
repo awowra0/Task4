@@ -6,9 +6,9 @@ Or
 Open task4notebook.ipynb and run prepared cells  
 
 ## Functions  
-create_dfb(num) - returns books dataframe; num is number between 1 and 5   
-create_dfo(num) - returns orders dataframe; num is number between 1 and 5  
-create_dfu(num) - returns users dataframe; num is number between 1 and 5  
+create_dfb(num) - returns books dataframe; num is number of STORE between 1 and 5   
+create_dfo(num) - returns orders dataframe; num is number of STORE between 1 and 5  
+create_dfu(num) - returns users dataframe; num is number of STORE between 1 and 5  
   
 unique_authors(dfb) - returns count of unique author sets - requires books dataframe  
 revenue(dfo) - returns all days by revenue - requires orders dataframe  
